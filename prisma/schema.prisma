@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      =  env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Restaurent {
+ restaurent_id String  @id
+ name String
+ location String
+ image_url  String
+ offers String
+}
